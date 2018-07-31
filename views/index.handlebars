@@ -1,0 +1,46 @@
+<div class="container">
+    <br>
+    <div class="row">
+        <div class="offset-md-3 col-md-6 offset-md-3 text-center" style="border-style: inset;">
+            <form>
+                <div class="form-group">
+                    <label id="input-label" for="add-burger-box">Order a burger</label>
+                    <input type="text" class="form-control" id="add-burger-box" placeholder="Enter a burger name">
+                </div>
+                <button type="submit" id="submit-burger" class="btn btn-primary">Order</button>
+            </form>
+        </div>
+
+    </div>
+    <br>
+</div>
+
+
+<div class="container">
+    <div class="row" id="topper">
+        <div class="col-md-4 offset-md-1" style="border-style: inset;">
+            <br>
+            <h3>Burgers ready to eat</h3>
+            <hr></hr>
+            <ul>
+                {{#each burgers}} {{#unless this.devoured}}
+                <li class="burger-list">{{this.burger_name}}
+                    <button type="button" class="btn btn-primary devour-btn" data-id="{{id}}">Devour it!</button>
+                </li>
+                {{/unless}} {{/each}}
+            </ul>
+        </div>
+
+        <div class="col-md-4 offset-md-2" style="border-style: inset;">
+            <br>
+            <h3>Burgers that have been eaten</h3>
+            <hr></hr>
+            <ul>
+                {{#each burgers}} {{#if this.devoured}}
+                <li class="burger-list-eaten">{{this.burger_name}}
+                </li>
+                {{/if}} {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>

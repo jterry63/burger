@@ -1,0 +1,51 @@
+.main-text {
+    background-color: white;;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  body {
+    /* background-image: url(../img/back_burger.jpg); */
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul li {
+    justify-content: space-between;
+    display: flex;
+  }
+  
+  .devour-btn, 
+  #submit-burger {
+    background-color: 
+    #d29748;
+    border-color: 
+    #d29748;
+  }
+  
+  .devour-btn:hover, 
+  #submit-burger:hover {
+    background-color: silver;
+    border-color: silver;
+  }
+  
+  form {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  
+  #input-label {
+    font-size: 24px;
+  }
+
+  .container {
+    background-color: white;
+  }
+
+  #topper {
+    padding: 50px;
+  }

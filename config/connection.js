@@ -5,19 +5,15 @@ var config_password = require("./config.js");
 
 var connection;
 
-// set up connection to use JawsDB for use on Heroku or fall back to local connection
-if (process.env.JAWSDB_URL) {
-    connection = mysql.createConnection(process.env.JAWSDB_URL);
-} else {
-    connection = mysql.createConnection({
-        port: 3306,
-        host: "localhost",
-        user: "root",
-        password: config_password.pass,
-        database: "burgers_db"
+connection = mysql.createConnection({
+    port: 3306,
+    host: "us-cdbr-iron-east-04.cleardb.net",
+    user: "b4031bfcf8037f:8f4c20dc",
+    password: config_password.pass,
+    database: "heroku_90febd3c7bbf0b8"
 
-    });
-}
+});
+
 
 connection.connect(function (err) {
     if (err) {

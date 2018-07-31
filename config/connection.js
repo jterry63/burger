@@ -5,12 +5,15 @@ var mysql = require("mysql");
 
 var connection;
 
-connection = mysql.createConnection({
-    port: 3306,
-    host: "us-cdbr-iron-east-04.cleardb.net",
-    user: "b4031bfcf8037f:8f4c20dc",
-    password: "8f4c20dc",
-    database: "heroku_90febd3c7bbf0b8"
+
+var connection = mysql.createConnection({
+    use_env_variable: "JAWSDB_URL",
+    user: "rzyza88dd1zanzqr",
+    password: "je3mokf5ki6y8wfo",
+    port: "3306",
+    dialect: "mysql"
+    // host: "mnwax9mxzow0k7hi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+
 
 });
 
